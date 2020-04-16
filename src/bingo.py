@@ -1,2 +1,2 @@
 def saludo():
-	return hola
+	return "hola que tal"
