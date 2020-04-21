@@ -1,7 +1,7 @@
 from src.bingo import carton
 from src.bingo import columna
 
-def test_menos_de_quince():
+def test_menos_de_quince():#verifica que no haya menos de 15 lugares ocupados
 	menos_carton = carton()
 	contador = 0
 	for fila in menos_carton:
@@ -10,7 +10,7 @@ def test_menos_de_quince():
 			
 	assert contador >= 15
 	
-def test_mas_de_quince():
+def test_mas_de_quince():#verifica que no haya mas de 15 lugares ocupados
 	mas_carton = carton()
 	contador = 0
 	for fila in mas_carton:
@@ -19,13 +19,13 @@ def test_mas_de_quince():
 			
 	assert contador <= 15
 
-def test_columnas():
+def test_columnas():#verifica que no haya columnas vacias
 	carton_columnas = carton()
 	contador = 0
 	bandera_columnas = 0
-	while contador < 9:
-		if ((columna(carton_columnas, contador)) == (0, 0, 0)):
-			bandera_columnas = 1
+	while contador < 9:#mira todas las 9 columnas
+		if ((columna(carton_columnas, contador)) == (0, 0, 0)):#si encuentra una columna vacia
+			bandera_columnas = 1#pone una bandera
 			break
 		
 		contador += 1
