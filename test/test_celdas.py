@@ -1,5 +1,6 @@
 from src.bingo import carton
 from src.bingo import columna
+
 def test_menos_de_quince():
 	menos_carton = carton()
 	contador = 0
@@ -19,14 +20,16 @@ def test_mas_de_quince():
 	assert contador <= 15
 
 def test_columnas():
-	test_carton = carton()
+	carton_columnas = carton()
 	contador = 0
-	bandera_test = 0
+	bandera_columnas = 0
 	while contador < 9:
-		if ((columna(test_carton, contador)) == (0, 0, 0)):
-			bandera_test = 1
+		if ((columna(carton_columnas, contador)) == (0, 0, 0)):
+			bandera_columnas = 1
 			break
 		
 		contador += 1
 	
-	assert bandera_test == 0;
+	assert bandera_columnas == 0
+
+	

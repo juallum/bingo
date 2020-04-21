@@ -1,8 +1,8 @@
 def carton():
 	carton = (
-		(1,0,1,1,1,0,1,0,1),
-		(0,1,0,1,0,1,1,1,1),
-		(0,1,0,0,1,0,0,1,0)
+		(0,0,0,0,0,0,0,0,0),
+		(1,1,1,1,1,1,1,1,1),
+		(0,1,0,1,1,0,1,1,1)
 	)
 	return carton
 
@@ -13,4 +13,6 @@ def columna(carton, nmro_columna):
 		carton[2][nmro_columna]
 	)
 
-print (columna(carton(),1))
+carton_prueba = carton()
+
+print (carton_prueba[0])
